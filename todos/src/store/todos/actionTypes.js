@@ -1,5 +1,18 @@
 export const ADD_TODO="ADD_TODO";
+export const ADD_TODO_LOADING="ADD_TODO_LOADING";
+export const ADD_TODO_ERROR="ADD_TODO_ERROR";
+export const ADD_TODO_SUCCESS="ADD_TODO_SUCCESS"
+
+export const GET_ALL_TODOS="GET_ALL_TODOS"
+export const GET_TODO_SUCCESS="GET_TODO_SUCCESS";
+export const GET_TODO_ERROR="GET_TODO_ERROR"
 
 export const REMOVE_TODO="REMOVE_TODO";
 
-export const EDIT_TODO="EDIT_TODO"
+export const GET_TODO="GET_TODO";
+export const GET_COMPLETED="GET_COMPLETED";
+export const GET_NEW="GET_NEW";
+
+export const EDIT_TODO="EDIT_TODO";
+
+export const MARK_COMPLETE="MARK_COMPLETE";
