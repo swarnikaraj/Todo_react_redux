@@ -1,18 +1,6 @@
 {
   "todos": [
     {
-      "title": "task1",
-      "status": false,
-      "description": "my task 1",
-      "id": 1
-    },
-    {
-      "title": "taskb,kb,yfujy",
-      "status": false,
-      "description": "gcjhvjhvhjbj",
-      "id": 2
-    },
-    {
       "title": "task4",
       "status": true,
       "description": "my task 4",
@@ -26,9 +14,15 @@
     },
     {
       "title": "task6",
-      "status": true,
+      "status": false,
       "description": "my task 6",
       "id": 6
+    },
+    {
+      "title": "task3",
+      "status": false,
+      "description": "this is noathersd task",
+      "id": 7
     }
   ]
 }
