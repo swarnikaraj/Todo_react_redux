@@ -10,8 +10,9 @@ import { Donebtn,Delbtn,Yellowbtn } from "../styledComponents/buttons";
 
 export const GetAllTodos=()=>{
     const dispatch=useDispatch()
-    const {loading,todos,error}=useSelector(state=> ({loading:state.loading, todos:state.todos,error:state.loading }));
-
+    const {loading,todos,error}=useSelector(state=> ({loading:state.app.loading, todos:state.app.todos,error:state.app.loading }));
+  
+   
    const delhandle=async(id)=>{
       try{
      await fetch(`http://localhost:3001/todos/${id}`,{method:"DELETE"}).then(d=>d.json()).then((res)=>{dispatch(removeTodo(res.id))})

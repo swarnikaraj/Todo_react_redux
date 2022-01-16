@@ -3,7 +3,7 @@ import { GetAllTodos } from "./gettodo"
 import { Formtodo } from "./addtodo"
 import { Bluebtn, } from "../styledComponents/buttons"
 import { useDispatch } from "react-redux"
-import { getAllTodos, getCompleted } from "../store/todos/action"
+import {  getCompleted } from "../store/todos/action"
 import { getNew } from "../store/todos/action";
 
 

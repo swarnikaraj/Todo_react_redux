@@ -1,7 +1,18 @@
 
 
-import {createStore} from "redux";
+import {createStore, combineReducers} from "redux";
 
 import { reducer  as todosReducer }  from "./reducer.js";
+import {reducer as authReducer}  from "../auth/reducer.js";
 
-export const store=createStore(todosReducer, window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const rootReducer=combineReducers({
+    auth:authReducer,
+    app:todosReducer
+})
+
+
+
+export const store=createStore(rootReducer);
+
+console.log(store.getState())

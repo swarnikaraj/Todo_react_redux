@@ -10,7 +10,7 @@ export const Formtodo=()=>{
     const [title,setTitle]=useState("");
     const [description,setDescription]=useState('')
     const dispatch=useDispatch()
-    const {loading,todos,error}=useSelector(state=> ({loading:state.loading, todos:state.todos,error:state.loading }));
+    const {loading,todos,error}=useSelector(state=> ({loading:state.app.loading, todos:state.app.todos,error:state.app.loading }));
   
    
 

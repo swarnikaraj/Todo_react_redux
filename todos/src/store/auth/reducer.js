@@ -1,18 +1,31 @@
-import { ADD_TODO } from "./actionTypes";
+import { loadData, saveData } from "../../utils/localstore";
+import { ADD_TODO, LOGIN_FAILURE, LOGIN_SUCCESS, LOGIN_USER } from "./actionTypes";
 import { REMOVE_TODO,EDIT_TODO } from "./actionTypes";
 
-export const reducer=(state,{type,payload})=>{
+const initState={token:loadData("token")||"",isAuth:false}
+
+export const reducer=(state=initState,{type,payload})=>{
 
 switch(type){
 
-    case ADD_TODO:
+    case LOGIN_SUCCESS:
+        saveData("token",payload)
         return {
             ...state,
-            todos:[...state.todos,payload],
+            isAuth:true,
+            token:payload,
+            
         };
+    case LOGIN_FAILURE:{
+         return {
+             ...state,
+             isAuth:false,
+             token:""
+         }
+    }    
     default:
-        return state;    
-
+        return state;   
+    
 }
 
 

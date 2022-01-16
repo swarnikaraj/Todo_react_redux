@@ -1,25 +1,26 @@
-import { ADD_TODO ,REMOVE_TODO,EDIT_TODO} from "./actionTypes"
+import {LOGIN_USER,LOGIN_SUCCESS, LOGIN_FAILURE} from "./actionTypes"
 
-export const addTodo=(data)=>{
+export const loginuser=(data)=>{
 
 return {
-    type:ADD_TODO,
+    type:LOGIN_USER,
     payload:data
 }};
 
 
-export const removeTodo=(id)=>{
+export const loginfailure=(err)=>{
 
     return {
-        type:REMOVE_TODO,
-        payload:id
-    }};
+        type:LOGIN_FAILURE,
+        payload:err
+    }
+}   
 
-export const editTodo=(id)=>{
+export const loginsuccess=(token)=>{
 
         return {
-            type:EDIT_TODO,
-            payload:id
-        }};
+            type:LOGIN_SUCCESS,
+            payload:token
+        };
 
-
+    }
